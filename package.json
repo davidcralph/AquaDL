@@ -1,0 +1,12 @@
+{
+    "name": "aquadl",
+    "description": "A better way to download online media, fast and safe. Supports YouTube, Vimeo and more!",
+    "author": "ohlookitsderpy",
+    "license": "MIT",
+    "version": "1.0.0",
+    "repository": "https://github.com/ohlookitsderpy/AquaDL",
+    "dependencies": {
+        "express": "4.16.4",
+        "youtube-dl": "1.12.1"
+    }
+}
