@@ -12,4 +12,5 @@ As some of my followers may know, I work on a website called https://qtradio.moe
 ```bash 
 git clone https://github.com/ohlookitsderpy/AquaDL/
 cd AquaDL
-yarn # Yes, I use Yarn. Yarn >>> NPM```
+yarn # Yes, I use Yarn. Yarn >>> NPM
+```
