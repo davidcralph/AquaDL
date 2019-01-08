@@ -1,18 +1,17 @@
 <html>
-
+<head>
+    <title>Finished | AquaDL</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,700" rel="stylesheet">
+    <link href="assets/css/index.css" rel="stylesheet"/>
+</head>
 <body>
-    <a href="" id="link">E</a>
-    <script>
-        function querySt(ji) { //ORIGINAL FROM https://stackoverflow.com/a/5422360
-            hu = window.location.search.substring(1);
-            gy = hu.split("&");
-            for (i = 0; i < gy.length; i++) {
-                ft = gy[i].split("=");
-                if (ft[0] == ji) return ft[1];
-            }
-        }
-        document.getElementById('link').setAttribute('href', `files/${querySt('file')}`);
-    </script>
+    <div id="wallpaper"></div>
+    <center>
+        <h1>AquaDL</h1>
+    <a href="" class="btn link" target="_blank" role="button" id="link">Download</a>
+    </center>
+    <script src="assets/js/index.js"></script>
+    <script>initDone();</script>
 </body>
 
 </html>
