@@ -57,3 +57,8 @@ input[type="text"] {
     z-index: -1;
     filter: brightness(50%);
 }
+
+#img {
+    width: 120px;
+    height: auto;
+}
