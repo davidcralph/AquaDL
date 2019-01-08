@@ -12,7 +12,7 @@ router.get('/download', (req, res) => {
     video.pipe(createWriteStream(`public/files/${string}.webm`));
     video.on('end', () => { 
         console.log(`[AquaDL] Finished! Saved to ${string}.webm`);
-        res.redirect(`/done.html?file=${string}.webm`); 
+        res.send(`${string}.webm`); 
     });
 });
 
