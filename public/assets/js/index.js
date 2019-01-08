@@ -7,5 +7,14 @@ function querySt(ji) { //ORIGINAL FROM https://stackoverflow.com/a/5422360
     }
 }
 
-function initDone() { document.getElementById('link').setAttribute('href', `files/${querySt('file')}`); }
+function initDone() { 
+    let file = querySt('file');
+    if (file === undefined) { 
+        document.getElementById('text').innerText = "404: File not found!";
+        document.getElementById("link").style.display = "none";
+        return;
+    }
+    document.getElementById('link').setAttribute('href', `files/${file}`); 
+}   
+
 function changeDL() { document.getElementById('link').setAttribute('href', `download?url=${document.getElementById('input').value}`); }
