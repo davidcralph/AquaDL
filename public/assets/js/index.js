@@ -17,4 +17,12 @@ function initDone() {
     document.getElementById('link').setAttribute('href', `files/${file}`); 
 }   
 
-function changeDL() { document.getElementById('link').setAttribute('href', `download?url=${document.getElementById('input').value}`); }
+function postReq(url) {
+  document.getElementById('link').classList.add('clicked');
+  document.getElementById('link').classList.remove('link');
+  axios.get(`download?url=${url}`).then(res => {
+    window.location.href = `done.html?file=${res.file}`
+  });
+}
+
+function changeDL() { document.getElementById('link').setAttribute('onclick', `javascript:(postReq('${document.getElementById('input').value}'))`); }
