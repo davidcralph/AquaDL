@@ -9,7 +9,6 @@ function querySt(ji) { //ORIGINAL FROM https://stackoverflow.com/a/5422360
 
 function isEmpty(str) { return !str.replace(/\s+/, '').length; }
 
-
 function initDone() {
     let file = querySt('file');
     if (file === undefined || file === 'undefined') {
