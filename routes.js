@@ -20,15 +20,6 @@ router.get('/download', (req, res) => {
 router.get('/info', (req, res) => {
     youtubedl.getInfo(req.query.url, (err, info) => {
         if (err) return;
-
-        console.log('id:', info.id);
-        console.log('title:', info.title);
-        console.log('url:', info.url);
-        console.log('thumbnail:', info.thumbnail);
-        console.log('description:', info.description);
-        console.log('filename:', info._filename);
-        console.log('format id:', info.format_id);
-
         res.json({title: info.title, desc: info.description, thumb: info.thumbnail});
     });
 });
