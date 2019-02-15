@@ -6,7 +6,7 @@
     "version": "1.0.0",
     "repository": "https://github.com/ohlookitsderpy/AquaDL",
     "dependencies": {
-        "express": "4.16.4",
+        "kirbe": "0.0.4",
         "youtube-dl": "1.12.2"
     }
 }
