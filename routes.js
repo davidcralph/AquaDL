@@ -1,11 +1,10 @@
-const { Router }            = require('express');
-const router                = Router();
 const youtubedl             = require('youtube-dl');
 const { createWriteStream } = require('fs');
 const { randomBytes }       = require('crypto');
 const config                = require('./config.json');
 
-router.get('/download', (req, res) => {
+module.exports = (app) => {
+app.get('/download', (req, res) => {
     console.log(`[AquaDL] Downloading ${req.query.url}...`);
     let video = youtubedl(req.query.url);
     let string = randomBytes(config.fileLength).toString('hex');
@@ -17,11 +16,10 @@ router.get('/download', (req, res) => {
     });
 });
 
-router.get('/info', (req, res) => {
+app.get('/info', (req, res) => {
     youtubedl.getInfo(req.query.url, (err, info) => {
         if (err) return;
         res.json({title: info.title, desc: info.description, thumb: info.thumbnail});
     });
 });
-
-module.exports = router;
+});
