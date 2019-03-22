@@ -7,6 +7,6 @@
     "repository": "https://github.com/ohlookitsderpy/AquaDL",
     "dependencies": {
         "express": "4.16.4",
-        "youtube-dl": "1.12.2"
+        "youtube-dl": "1.13.1"
     }
 }
