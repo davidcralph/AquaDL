@@ -45,7 +45,7 @@ input[type="text"] {
 }
 
 #wallpaper {
-    background-image: url('../img/wallpaper.png');
+    background-image: url('../img/wallpaper.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
